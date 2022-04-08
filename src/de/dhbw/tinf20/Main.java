@@ -9,8 +9,8 @@ public final class Main {
 	}
 
 	public static void main(String[] arguments) {
-		Vater steafan = new Vater();
-		Onkel onkel = new Onkel();
+		Familienmitglied steafan = new Vater();
+		Familienmitglied onkel = new Onkel();
 		
 		List<Familienmitglied> familie = List.of(
 				steafan,
@@ -19,13 +19,20 @@ public final class Main {
 		steafan.essenswunsch();
 		onkel.essenswunsch();
 		
-		familie.forEach(
-				Familienmitglied::essenswunsch);
-//		for (Familienmitglied each : familie) {
-//			each.essenswunsch();
-//		}
+//		familie.forEach(
+//				Familienmitglied::essenswunsch);
+		for (Familienmitglied each : familie) {
+			if (each instanceof Vater) {
+				((Vater) each).essenswunsch();
+			}
+			if (each instanceof Onkel) {
+				((Onkel) each).essenswunsch();
+			}
+			each.essenswunsch();
+		}
 		
 		Familienfeier juhu = new Familienfeier();
+		
 		juhu.nehmeTeil(steafan);
 		juhu.nehmeTeil(onkel);
 		
