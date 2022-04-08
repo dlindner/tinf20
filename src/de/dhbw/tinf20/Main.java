@@ -19,8 +19,20 @@ public final class Main {
 		steafan.essenswunsch();
 		onkel.essenswunsch();
 		
-		for (Familienmitglied each : familie) {
-			each.essenswunsch();
-		}
+		familie.forEach(
+				Familienmitglied::essenswunsch);
+//		for (Familienmitglied each : familie) {
+//			each.essenswunsch();
+//		}
+		
+		Familienfeier juhu = new Familienfeier();
+		juhu.nehmeTeil(steafan);
+		juhu.nehmeTeil(onkel);
+		
+		familie.forEach(
+				juhu::nehmeTeil);
+//		for (Familienmitglied each : familie) {
+//			juhu.nehmeTeil(each);
+//		}
 	}
 }
