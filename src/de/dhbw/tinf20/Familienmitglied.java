@@ -1,6 +1,6 @@
 package de.dhbw.tinf20;
 
-public abstract class Familienmitglied {
+public abstract class Familienmitglied extends Object {
 	
 	public Familienmitglied() {
 		super();
