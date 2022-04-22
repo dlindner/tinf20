@@ -1,4 +1,4 @@
-package de.dhbw.tinf20;
+package de.dhbw.tinf20.intro;
 
 public class Vater extends Familienmitglied {
 	
