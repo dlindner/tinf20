@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Scenario5 extends Scenario {
 	
-	private int x;
-	private int y;
+	private volatile int x;
+	private volatile int y;
 	
 	public Scenario5() {
 		super();
