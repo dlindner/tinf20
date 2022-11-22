@@ -1,6 +1,6 @@
 package de.dhbw.tinf20.pattern.singleton;
 
-public final class RandomnessSingleton {
+public final class RandomnessSingleton implements Zufallsgenerator {
 
 //	private static RandomnessSingleton instance = new RandomnessSingleton();
 	private static RandomnessSingleton instance;
@@ -24,6 +24,7 @@ public final class RandomnessSingleton {
 		}
 	}
 	
+	@Override
 	public int getZufallszahl() {
 		return hashCode();
 	}

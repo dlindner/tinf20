@@ -14,7 +14,8 @@ public class Main {
 	}
 	
 	public static void vorgang() {
-		RandomnessSingleton verwendung = RandomnessSingleton.getInstance();
+		KorrektesSingleton verwendung = KorrektesSingleton.instance;
+		//RandomnessSingleton verwendung = RandomnessSingleton.getInstance();
 		System.out.println(
 			Thread.currentThread().getId() + ": " + verwendung.getZufallszahl()
 		);
