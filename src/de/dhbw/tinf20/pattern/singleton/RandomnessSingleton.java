@@ -4,6 +4,7 @@ public final class RandomnessSingleton {
 
 	//private static MySingleton instance = new MySingleton();
 	private static RandomnessSingleton instance;
+	private static final Object lock = new Object();
 
 	private RandomnessSingleton() {
 		super();
@@ -15,10 +16,12 @@ public final class RandomnessSingleton {
 	}
 
 	public static synchronized RandomnessSingleton getInstance() {
-		if (instance == null) {
-			instance = new RandomnessSingleton();
+		synchronized (lock) {
+			if (instance == null) {
+				instance = new RandomnessSingleton();
+			}
+			return instance;
 		}
-		return instance;
 	}
 	
 	public int getZufallszahl() {
