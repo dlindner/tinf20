@@ -2,7 +2,7 @@ package de.dhbw.tinf20.pattern.singleton;
 
 public final class RandomnessSingleton {
 
-	//private static MySingleton instance = new MySingleton();
+//	private static RandomnessSingleton instance = new RandomnessSingleton();
 	private static RandomnessSingleton instance;
 	private static final Object lock = new Object();
 
@@ -15,7 +15,7 @@ public final class RandomnessSingleton {
 //		}
 	}
 
-	public static synchronized RandomnessSingleton getInstance() {
+	public static RandomnessSingleton getInstance() {
 		synchronized (lock) {
 			if (instance == null) {
 				instance = new RandomnessSingleton();
