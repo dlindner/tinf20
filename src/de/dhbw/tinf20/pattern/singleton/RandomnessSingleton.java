@@ -7,14 +7,14 @@ public final class RandomnessSingleton {
 
 	private RandomnessSingleton() {
 		super();
-		try {
-			Thread.sleep(1000L);
-		} catch (InterruptedException e) {
-			Thread.currentThread().interrupt();
-		}
+//		try {
+//			Thread.sleep(1000L);
+//		} catch (InterruptedException e) {
+//			Thread.currentThread().interrupt();
+//		}
 	}
 
-	public static RandomnessSingleton getInstance() {
+	public static synchronized RandomnessSingleton getInstance() {
 		if (instance == null) {
 			instance = new RandomnessSingleton();
 		}
