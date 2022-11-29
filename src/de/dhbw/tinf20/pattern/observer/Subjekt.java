@@ -21,6 +21,7 @@ public abstract class Subjekt {
 	}
 	
 	protected void benachrichtige() {
+		System.out.println("Es gibt gerade " + this.angemeldeteBeobachter.size() + " angemeldete Beobachter");
 		for (Beobachter each : this.angemeldeteBeobachter) {
 			each.aktualisiere();
 		}
