@@ -14,9 +14,9 @@ public class RahmenDekorierer extends Dekorierer {
 	
 	@Override
 	public void zeichne() {
-		super.zeichne();
 		for (int i = 0; i < this.rahmenbreite; i++) {
 			System.out.print("|");
 		}
+		super.zeichne();
 	}
 }

@@ -4,6 +4,6 @@ public class Textanzeige implements VisuelleKomponente {
 	
 	@Override
 	public void zeichne() {
-		System.out.println("Lorem Ipsum");
+		System.out.print("Lorem Ipsum");
 	}
 }
