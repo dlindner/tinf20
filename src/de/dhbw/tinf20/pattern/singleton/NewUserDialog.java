@@ -25,9 +25,9 @@ public class NewUserDialog extends JDialog {
 	}
 
 	private void saveUser() {
-		final User toSave = new User(firstName(), lastName(), role());
-		this.printer.printAuthorizationFor(toSave);
-		Database.getInstance().save(toSave);
-		Application.getInstance().getDataModel().users().refresh();
+//		final User toSave = new User(firstName(), lastName(), role());
+//		this.printer.printAuthorizationFor(toSave);
+//		Database.getInstance().save(toSave);
+//		Application.getInstance().getDataModel().users().refresh();
 	}
 }
