@@ -8,6 +8,6 @@ public class Onkel extends Familienmitglied {
 	
 	@Override
 	public void essenswunsch() {
-		System.out.println("S3: DHBW Mensa Hotdog");
+		System.out.println(Vater.S2_SLUSHY_MIT_EIS);
 	}
 }
